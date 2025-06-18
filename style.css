@@ -69,8 +69,69 @@ h2{
 
 .container{
  display: flex;
+ padding: 4px;
+ flex-wrap: wrap;
  background-color: rgba(0, 0, 0, 0.5);
  margin: 10px;
  border-radius:10px;
- height:400px;
+ height:500px;
+ overflow:clip;
+ gap:4px;
+ position: relative;
 }
+
+.container h3{
+    width: 100%;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 2em;
+}
+.container img{
+width: calc(20% - 4px);
+height:var(width);
+background-color: rgb(0, 0, 0, 0.5);
+border-radius: 10px;
+object-fit: cover;
+
+}
+
+@media (max-width:1000px) {
+    .container img{
+        width:calc(25% - 4px);
+        height: 180px;
+    }
+}
+
+@media (max-width:900px) {
+    .container img{
+        width:calc(33.3333333% - 4px);
+        height: 200px;
+    }
+}
+
+.dropdown{
+    width:40px;
+    height: 40px;
+    padding: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    font-size: 3em;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    font-family:monospace;
+    position: absolute;
+    bottom: 8px;
+    left:8px;
+}
+/* 
+.dropdown:checked {
+
+    width: 100px;
+    height: 1000px
+} */
+
+
+
+
