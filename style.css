@@ -28,6 +28,8 @@ h2{
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     overflow-x: auto;
+    margin-bottom: 100px;
+    padding: 5px;
 
 }
 .category{
@@ -65,19 +67,29 @@ h2{
     background-color: rgba(0, 0, 0, 0.5);
     object-fit:cover;
     border-radius: 2px;
+
 }
+
+
+
 
 .container{
  display: flex;
  padding: 4px;
  flex-wrap: wrap;
  background-color: rgba(0, 0, 0, 0.5);
- margin: 10px;
+ margin-bottom: 150px;
  border-radius:10px;
- height:500px;
+ height:1500px;
  overflow:clip;
  gap:4px;
  position: relative;
+
+}
+
+.expand {
+    height: fit-content;
+    background-color:'red';
 }
 
 .container h3{
@@ -87,26 +99,51 @@ h2{
     color: white;
     font-size: 2em;
 }
+
 .container img{
-width: calc(20% - 4px);
+width: 100%;
+height: 80%;
+object-fit: cover;
+}
+
+.container div{
+width: calc(33.33% - 4px);
 height:var(width);
 background-color: rgb(0, 0, 0, 0.5);
 border-radius: 10px;
 object-fit: cover;
+transition: scale 0.1s cubic-bezier(0.19, 1, 0.22, 1);
 
 }
 
+.container div p {
+    font-size: 3rem;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline;
+}
+
+.container .price-tag {
+    color: green;
+    float: right;
+}
+
+.container img:hover{
+    /* border: 4px solid rgb(50, 50, 100); */
+    scale: 1.1;
+}
+
 @media (max-width:1000px) {
-    .container img{
-        width:calc(25% - 4px);
-        height: 180px;
+    .container div{
+        width:calc(50% - 4px);
+        
     }
 }
 
 @media (max-width:900px) {
-    .container img{
-        width:calc(33.3333333% - 4px);
-        height: 200px;
+    .container div{
+        width:100%;
+    
     }
 }
 
@@ -114,7 +151,7 @@ object-fit: cover;
     width:40px;
     height: 40px;
     padding: auto;
-    background-color: rgb(255, 255, 255);
+    color: red;
     border-radius: 50%;
     font-size: 3em;
     border: 2px solid black;
@@ -125,6 +162,15 @@ object-fit: cover;
     bottom: 8px;
     left:8px;
 }
+
+/* .dropdown:checked ~ .container {
+    background-color: red;
+} */
+
+.alpha-container{
+    position: relative;
+}
+
 /* 
 .dropdown:checked {
 

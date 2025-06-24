@@ -1,11 +1,11 @@
-x=document.querySelectorAll('.dropdown');
-x[0].checked=true
+dropdown = document.querySelectorAll('.dropdown')
 
-// while(true){
-//     for (y of x){ 
-//         if (y.checked == true){
-//             y.parentElement.style.backgroundColor = 'red'
-//         }
-    
-// }
-// }
+expand = function expand(){
+    this.previousElementSibling.classList.toggle('expand')
+    console.dir(this. previousElementSibling.classList)
+    console.log(this.previousElementSibling.getAttribute('class'))
+}
+
+for (drop of dropdown) {
+    drop.addEventListener('click', expand)
+}
