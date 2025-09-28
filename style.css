@@ -11,11 +11,15 @@ body {
 header {
     font-family:'Vast Shadow'; 
     font-size: 5rem;
+    opacity: 0;
+    transition: 0.5s;
 }
 
 .motto {
     font-family: margarine;
     font-weight: 100;
+    opacity: 0;
+    transition: 0.5s;
 }
 
 .logo {
@@ -67,8 +71,8 @@ h2 {
 
 @media(min-width:1080px){
     .category {
-        width:400px;
-        height:400px;
+        width:250px;
+        height:250px;
     }
 }
 
@@ -121,7 +125,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0);
     /* margin-bottom: 150px; */
     border-radius:10px;
-    height:fit-content;
+    height:var(width);
     /* overflow:clip; */
     overflow-x: auto;
     /* gap:15px; */
@@ -146,7 +150,7 @@ h2 {
 .contain-box img {
     width:100%;
     height:auto;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: inherit;
     transition: scale 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 }
@@ -283,7 +287,7 @@ h2 {
     width: 100%;
     aspect-ratio: 16/9;
     /* background-color:rgba(255, 0, 0, 0.856); */
-    height: 500px
+    height: 500px;
     overflow: clip;
 }
 
@@ -305,4 +309,9 @@ h2 {
     background-size:50% 50%;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.fade-in{
+    opacity: 0;
+    transition:1s;
 }

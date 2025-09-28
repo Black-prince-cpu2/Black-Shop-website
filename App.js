@@ -1,11 +1,21 @@
-dropdown = document.querySelectorAll('.dropdown')
+const fadeIn = document.querySelectorAll('.fade-in');
+const fadeTime=300
 
-expand = function expand(){
-    this.previousElementSibling.classList.toggle('expand')
-    console.dir(this. previousElementSibling.classList)
-    console.log(this.previousElementSibling.getAttribute('class'))
+let fadeIndex=0
+
+function fade() {
+    setTimeout(() => {
+        fadeIn[fadeIndex].style.opacity='100%';
+        fadeIndex += 1
+        if (fadeIndex <= fadeIn.length){
+            fade()
+        }
+        else{
+            null;
+        }
+    },fadeTime) 
 }
 
-for (drop of dropdown) {
-    drop.addEventListener('click', expand)
-}
+fade()
+
+
