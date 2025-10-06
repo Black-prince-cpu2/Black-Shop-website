@@ -1,3 +1,7 @@
+.html{
+    scroll-behavior: smooth;
+}
+
 .headings {
     display: block;
     width: fit-content;
@@ -31,7 +35,9 @@ h2 {
     font-size: 1.5rem;
     font-style: italic;
 }
-
+a{
+    text-decoration: none;
+}
 @media (max-width:720px) {
     header {font-size: 3.5rem;}
     h2 {font-size: 0.8rem;}
@@ -43,7 +49,7 @@ h2 {
     margin-bottom: 100px;
     margin-top: 50px;
     padding: 2px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(13, 41, 22, 0.7);
     
 }
 
@@ -54,9 +60,8 @@ h2 {
     grid-auto-columns: var(width);
     overflow-x: auto;
     justify-content: space-evenly;
-    
+    }
 
-}
 .category {
     display: flex;
     flex-direction: column;
@@ -67,20 +72,6 @@ h2 {
     width:200px;
     height:200px; /* already set, so this works */
     padding: 5px;
-}
-
-@media(min-width:1080px){
-    .category {
-        width:250px;
-        height:250px;
-    }
-}
-
-@media(max-width:380px){
-    .category {
-        width:150px;
-        height:150px;
-    }
 }
 
 .category p {
@@ -94,11 +85,31 @@ h2 {
     font-weight: 500;
 }
 
-@media (min-width:1024px) {
+
+@media(min-width:1024px){
+    .category {
+        width:250px;
+        height:250px;
+    } 
+    
     .category p {
         font-size:1.25em;
     }
 }
+
+
+@media(max-width:480px){
+    .category {
+        width:120px;
+        height:120px;
+    }
+
+    .category p {
+        font-size: 0.75em;
+    }
+}
+
+
 
 .category img {
     flex: 1 1 90%;
@@ -112,9 +123,10 @@ h2 {
 .label {
     width:fit-content;
     /* background-color: red; */
-    font-size:2.5em;
+    font-size:1em;
     color:black;
     margin: 10px;
+    margin: auto;
 }
 
 .contain-box {
@@ -150,6 +162,7 @@ h2 {
 .contain-box img {
     width:100%;
     height:auto;
+    max-height: 500px;
     object-fit: contain;
     border-radius: inherit;
     transition: scale 0.2s cubic-bezier(0.19, 1, 0.22, 1);
@@ -163,9 +176,9 @@ h2 {
     margin: 10px;
     position: relative;
     background-color: white;
-    border:1px solid grey;
+    border:1px solid rgba(5, 25, 10, 0.7);
     border-radius: 10px;
-    object-fit: cover;
+
     overflow: hidden;
 }
 
@@ -200,17 +213,17 @@ h2 {
     position: relative;
     height: fit-content;
     /* background-color: rgba(0, 0, 0, 0.5); */
-    border-top: 2px solid black;
+    border-top:  1px solid rgba(5, 25, 10, 0.7);
     margin:2px;
     padding: 5px;
 }
-.dropdown {
+/* .dropdown {
     width:40px;
     height: 40px;
     position: absolute;
     bottom: 8px;
     left:8px;
-}
+} */
 
 .top {
     position: absolute;
@@ -224,12 +237,12 @@ h2 {
 
 .panel {
     color: white;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(5, 25, 10, 0.7);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
 }
 
-.price {
+/* .price {
     position: absolute;
     bottom:0px;
     height: 20%;
@@ -252,8 +265,8 @@ h2 {
     grid-area: sales-price;
     font-weight:600;
     font-size: 1.2em;
-}
-.purchase-button {
+} */
+/* .purchase-button {
     grid-area:purchase-button;
     width: 40%;
     justify-content: center;
@@ -268,14 +281,7 @@ h2 {
 
 .purchase-button:active {
     box-shadow: 0px 0px;
-}
-
-.banner-sizing{
-    
-    
-    
-    background-color: rgba(137, 43, 226, 0.372);
-    }
+} */
 
 .banner-sizing img{
     width: 100%;
@@ -287,7 +293,7 @@ h2 {
     width: 100%;
     aspect-ratio: 16/9;
     /* background-color:rgba(255, 0, 0, 0.856); */
-    height: 500px;
+
     overflow: clip;
 }
 
@@ -315,3 +321,17 @@ h2 {
     opacity: 0;
     transition:1s;
 }
+
+#WhatsApp {
+    position:fixed;
+    bottom: 20px;
+    right: 20px;
+}
+/* expand on touch */
+#WhatsApp img {
+    width: 50px;
+    height: 50px;
+}
+
+/* bring button down */
+
